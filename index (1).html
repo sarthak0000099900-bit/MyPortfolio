@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarthak Lad | Web Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E293B',
+                        accent: '#10B981',
+                        sololearn: '#1CAF9A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-900 text-white font-sans antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 glass-card border-b border-slate-700 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent cursor-pointer hover:opacity-80 transition-opacity">
+                        SL
+                    </a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html#home" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-primary transition-colors hover:bg-slate-800/50">Home</a>
+                        <a href="index.html#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-primary transition-colors hover:bg-slate-800/50">About</a>
+                        <a href="index.html#skills" class="nav-link px-3 py-2 rounded-md text-sm font-medium hover:text-primary transition-colors hover:bg-slate-800/50">Skills</a>
+                        <!-- New Link to Projects Page -->
+                        <a href="projects.html" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-accent hover:text-white transition-colors hover:bg-slate-800/50 border border-accent/20">My Codes</a>
+                        <a href="index.html#contact" class="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-all transform hover:scale-105 shadow-lg hover:shadow-blue-500/50">Contact Me</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none p-2 rounded-md hover:bg-slate-800 transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 border-t border-slate-700 absolute w-full shadow-2xl transition-all duration-300 ease-in-out opacity-0 transform -translate-y-5">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#home" class="block hover:bg-slate-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium transition-colors">Home</a>
+                <a href="index.html#about" class="block hover:bg-slate-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium transition-colors">About</a>
+                <a href="index.html#skills" class="block hover:bg-slate-700 hover:text-primary px-3 py-2 rounded-md text-base font-medium transition-colors">Skills</a>
+                <a href="projects.html" class="block hover:bg-slate-700 hover:text-accent px-3 py-2 rounded-md text-base font-medium transition-colors">My Codes</a>
+                <a href="index.html#contact" class="block bg-primary text-white px-3 py-2 rounded-md text-base font-medium hover:bg-blue-600 transition-colors mt-4 text-center">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center min-h-screen md:min-h-[90vh] overflow-hidden">
+        <canvas id="particles-canvas"></canvas>
+
+        <div class="md:w-1/2 text-center md:text-left mt-10 md:mt-0 relative z-10 reveal-element">
+            <div class="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-primary uppercase bg-blue-900/30 rounded-full border border-blue-500/30">
+                Available for work
+            </div>
+            <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+                Hi, I'm <span class="text-primary">Sarthak Lad</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-8 font-light h-8">
+                I am a <span id="typing-text" class="text-accent font-semibold"></span><span class="cursor">&nbsp;</span>
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <a href="projects.html" class="px-8 py-3 bg-accent hover:bg-emerald-600 rounded-lg font-semibold transition-all transform hover:-translate-y-1 shadow-lg shadow-emerald-500/30 text-white">
+                    See My Codes
+                </a>
+                <a href="index.html#contact" class="px-8 py-3 bg-primary hover:bg-blue-600 rounded-lg font-semibold transition-all transform hover:-translate-y-1 shadow-lg shadow-blue-500/30 text-white">
+                    Hire Me
+                </a>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center relative z-10 reveal-element" style="transition-delay: 200ms;">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-full blur-3xl opacity-20 animate-pulse transform scale-75"></div>
+            
+            <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-slate-700 shadow-2xl overflow-hidden group">
+                <img 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                    alt="Sarthak Lad" 
+                    class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+                    onerror="this.src='https://ui-avatars.com/api/?name=Sarthak+Lad&background=3B82F6&color=fff&size=512'"
+                >
+                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300 pointer-events-none"></div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow hidden md:block z-10">
+            <a href="#about" class="text-slate-500 hover:text-primary transition-colors">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-slate-800/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-element">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+            <div class="glass-card p-8 rounded-2xl max-w-3xl mx-auto text-center md:text-left shadow-xl hover:shadow-primary/10 transition-shadow reveal-element">
+                <p class="text-lg text-slate-300 leading-relaxed mb-6">
+                    I am a dedicated Web Developer with a strong focus on frontend technologies. I specialize in building clean, user-friendly interfaces using modern web standards. I am constantly learning new tools and frameworks to deliver the best possible solutions for web projects.
+                </p>
+                <div class="grid grid-cols-2 gap-4 text-center mt-8">
+                    <div class="p-4 bg-slate-800 rounded-lg border border-slate-700 hover:border-primary/50 transition-colors transform hover:-translate-y-1 duration-300">
+                        <i class="fas fa-rocket text-primary text-2xl mb-2"></i>
+                        <h3 class="font-bold">Fast</h3>
+                        <p class="text-xs text-slate-400">Optimized Code</p>
+                    </div>
+                    <div class="p-4 bg-slate-800 rounded-lg border border-slate-700 hover:border-accent/50 transition-colors transform hover:-translate-y-1 duration-300">
+                        <i class="fas fa-mobile-alt text-accent text-2xl mb-2"></i>
+                        <h3 class="font-bold">Responsive</h3>
+                        <p class="text-xs text-slate-400">Mobile First</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal-element">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-400">My technical proficiency progress</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 hover:border-primary transition-colors group reveal-element">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-bold flex items-center group-hover:text-primary transition-colors"><i class="fab fa-html5 text-orange-500 mr-2 text-xl"></i> HTML</span>
+                        <span class="text-primary font-bold">95%</span>
+                    </div>
+                    <div class="w-full bg-slate-900 rounded-full h-3 overflow-hidden">
+                        <div class="bg-orange-500 h-3 rounded-full progress-bar-fill shadow-[0_0_10px_rgba(249,115,22,0.5)]" data-width="95%"></div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 hover:border-primary transition-colors group reveal-element" style="transition-delay: 100ms;">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-bold flex items-center group-hover:text-primary transition-colors"><i class="fab fa-css3-alt text-blue-500 mr-2 text-xl"></i> CSS</span>
+                        <span class="text-primary font-bold">80%</span>
+                    </div>
+                    <div class="w-full bg-slate-900 rounded-full h-3 overflow-hidden">
+                        <div class="bg-blue-500 h-3 rounded-full progress-bar-fill shadow-[0_0_10px_rgba(59,130,246,0.5)]" data-width="80%"></div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 hover:border-primary transition-colors group reveal-element" style="transition-delay: 200ms;">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-bold flex items-center group-hover:text-primary transition-colors"><i class="fab fa-js text-yellow-400 mr-2 text-xl"></i> JavaScript</span>
+                        <span class="text-primary font-bold">75%</span>
+                    </div>
+                    <div class="w-full bg-slate-900 rounded-full h-3 overflow-hidden">
+                        <div class="bg-yellow-400 h-3 rounded-full progress-bar-fill shadow-[0_0_10px_rgba(250,204,21,0.5)]" data-width="75%"></div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800 p-6 rounded-xl shadow-lg border border-slate-700 hover:border-primary transition-colors group reveal-element" style="transition-delay: 300ms;">
+                    <div class="flex justify-between mb-2">
+                        <span class="font-bold flex items-center group-hover:text-primary transition-colors"><i class="fas fa-wind text-teal-400 mr-2 text-xl"></i> Tailwind CSS</span>
+                        <span class="text-primary font-bold">70%</span>
+                    </div>
+                    <div class="w-full bg-slate-900 rounded-full h-3 overflow-hidden">
+                        <div class="bg-teal-400 h-3 rounded-full progress-bar-fill shadow-[0_0_10px_rgba(45,212,191,0.5)]" data-width="70%"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-slate-800/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 reveal-element">Get In Touch</h2>
+            <div class="w-20 h-1 bg-primary mx-auto rounded-full mb-8 reveal-element"></div>
+            <p class="text-slate-300 mb-12 text-lg reveal-element">
+                Have a project in mind or just want to say hi? Feel free to connect with me!
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-8 rounded-2xl hover:bg-slate-700/50 transition-all group hover:-translate-y-2 duration-300 reveal-element" style="transition-delay: 0ms;">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/30 transition-colors group-hover:scale-110 duration-300">
+                        <i class="fas fa-envelope text-primary text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Email Me</h3>
+                    <p class="text-slate-400 mb-6 text-sm group-hover:text-white transition-colors truncate">sarthaklad444@gmail.com</p>
+                    <a href="mailto:sarthaklad444@gmail.com" class="inline-block w-full px-6 py-2 border-2 border-primary text-primary hover:bg-primary hover:text-white rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/40">
+                        Write an Email
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl hover:bg-slate-700/50 transition-all group hover:-translate-y-2 duration-300 reveal-element" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 bg-[#0077b5]/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#0077b5]/30 transition-colors group-hover:scale-110 duration-300">
+                        <i class="fab fa-linkedin-in text-[#0077b5] text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">LinkedIn</h3>
+                    <p class="text-slate-400 mb-6 text-sm group-hover:text-white transition-colors">Connect professionally</p>
+                    <a href="https://www.linkedin.com/in/sarthaklad444" target="_blank" class="inline-block w-full px-6 py-2 border-2 border-[#0077b5] text-[#0077b5] hover:bg-[#0077b5] hover:text-white rounded-full font-semibold transition-all shadow-lg hover:shadow-[#0077b5]/40">
+                        View Profile
+                    </a>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl hover:bg-slate-700/50 transition-all group hover:-translate-y-2 duration-300 reveal-element" style="transition-delay: 400ms;">
+                    <div class="w-16 h-16 bg-sololearn/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-sololearn/30 transition-colors group-hover:scale-110 duration-300">
+                        <i class="fas fa-code text-sololearn text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">SoloLearn</h3>
+                    <p class="text-slate-400 mb-6 text-sm group-hover:text-white transition-colors">My Coding Journey</p>
+                    <a href="https://www.sololearn.com/profile/21785903/?ref=app" target="_blank" class="inline-block w-full px-6 py-2 border-2 border-sololearn text-sololearn hover:bg-sololearn hover:text-white rounded-full font-semibold transition-all shadow-lg hover:shadow-sololearn/40">
+                        Check Progress
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-500 mb-4">
+                &copy; <script>document.write(new Date().getFullYear())</script> Sarthak Lad. All rights reserved.
+            </p>
+            <div class="flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/in/sarthaklad444" target="_blank" class="text-slate-400 hover:text-[#0077b5] transition-colors transform hover:scale-125 duration-200" title="LinkedIn">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="mailto:sarthaklad444@gmail.com" class="text-slate-400 hover:text-primary transition-colors transform hover:scale-125 duration-200" title="Email">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+                <a href="https://www.sololearn.com/profile/21785903/?ref=app" target="_blank" class="text-slate-400 hover:text-sololearn transition-colors transform hover:scale-125 duration-200" title="SoloLearn">
+                    <i class="fas fa-code text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+

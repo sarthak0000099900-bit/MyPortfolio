@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1E293B',
+                        accent: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { height: 100vh; display: flex; flex-direction: column; }
+        #project-viewer-container { flex-grow: 1; position: relative; width: 100%; height: 100%; }
+        iframe { width: 100%; height: 100%; border: none; }
+    </style>
+</head>
+<body class="bg-slate-900 text-white">
+
+    <!-- Top Bar -->
+    <div class="h-16 bg-slate-800 border-b border-slate-700 flex items-center justify-between px-4 z-50">
+        <div class="flex items-center space-x-4">
+            <a href="projects.html" class="flex items-center text-slate-400 hover:text-white transition-colors">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Gallery
+            </a>
+            <div class="h-6 w-px bg-slate-600"></div>
+            <h1 id="project-title" class="text-lg font-bold text-white">Loading...</h1>
+        </div>
+        
+        <!-- Device Toggles (Optional visual flare) -->
+        <div class="hidden md:flex space-x-2 text-slate-500">
+            <i class="fas fa-desktop hover:text-white cursor-pointer"></i>
+            <i class="fas fa-tablet-alt hover:text-white cursor-pointer"></i>
+            <i class="fas fa-mobile-alt hover:text-white cursor-pointer"></i>
+        </div>
+    </div>
+
+    <!-- The Game/Code loads here -->
+    <div id="project-viewer-container">
+        <!-- JS injects iframe here -->
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+
